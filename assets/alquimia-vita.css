@@ -1,0 +1,107 @@
+/*
+  Alquimia Vita — capa de identidad visual sobre Dawn
+  ----------------------------------------------------
+  Este archivo NO reemplaza los estilos de Dawn (base.css, component-*.css):
+  se carga después y los complementa. La paleta y la tipografía "de marca"
+  viven en Theme settings (color schemes, type_header_font, type_body_font,
+  type_accent_font) para que sean editables desde el Theme Editor; acá solo
+  se definen tokens que Dawn no expone como setting y los estilos de
+  componentes nuevos o re-skineados.
+
+  Índice:
+  1. Tokens complementarios
+  2. Tipografía base (eyebrows, escala editorial)
+  3. Header
+  4. Logo (fallback mientras no haya settings.logo cargado)
+*/
+
+/* 1. Tokens complementarios ------------------------------------------- */
+:root {
+  --av-gold: #b08a42;
+  --av-gold-light: #cba562;
+  --av-gold-pale: #e4cfa0;
+  --av-forest: #3f5240;
+  --av-forest-soft: #5c7358;
+  --av-border: #c7b98f;
+  --av-muted: rgba(var(--color-foreground), 0.62);
+
+  --av-section-padding-block: 6rem;
+  --av-section-padding-block-mobile: 3.5rem;
+}
+
+@media screen and (max-width: 749px) {
+  :root {
+    --av-section-padding-block: var(--av-section-padding-block-mobile);
+  }
+}
+
+/* 2. Tipografía base ---------------------------------------------------
+   .av-eyebrow es la etiqueta pequeña en mayúsculas que antecede a los
+   títulos de sección ("NUESTROS RITUALES", "CIENCIA", etc. en la
+   referencia). Se apoya en la tipografía de acento nativa del theme. */
+.av-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  font-family: var(--font-accent-family);
+  font-style: var(--font-accent-style);
+  font-size: 1.3rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--av-gold);
+  margin: 0 0 1rem;
+}
+
+.av-eyebrow::before {
+  content: '';
+  width: 1.6rem;
+  height: 1px;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* 3. Header --------------------------------------------------------------
+   El color ya llega correcto vía color scheme (scheme-1 = Marfil). Acá solo
+   se ajustan proporciones, tracking y el borde inferior para que se sienta
+   editorial en lugar de genérico. No se toca header.liquid: todo se resuelve
+   pisando las clases nativas de Dawn. */
+.header-wrapper--border-bottom {
+  border-bottom: 1px solid var(--av-border);
+}
+
+.header__inline-menu .header__menu-item {
+  font-family: var(--font-accent-family);
+  font-size: 1.3rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* 4. Logo ----------------------------------------------------------------
+   Lockup de ícono + wordmark que se muestra mientras Theme settings > Logo
+   no tenga una imagen cargada (ver snippets/av-logo.liquid). */
+.av-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 0;
+}
+
+.av-logo__icon {
+  height: 2.8rem;
+  width: auto;
+}
+
+.av-logo__wordmark {
+  height: 1.8rem;
+  width: auto;
+}
+
+@media screen and (max-width: 749px) {
+  .av-logo__icon {
+    height: 2.4rem;
+  }
+
+  .av-logo__wordmark {
+    height: 1.5rem;
+  }
+}

@@ -143,6 +143,17 @@
         "unit": "%",
         "label": "t:settings_schema.typography.settings.body_scale.label",
         "default": 100
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header__3.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_accent_font",
+        "default": "space_mono_n4",
+        "label": "t:settings_schema.typography.settings.type_accent_font.label",
+        "info": "t:settings_schema.typography.settings.type_accent_font.info"
       }
     ]
   },
@@ -1356,6 +1367,12 @@
         "id": "social_vimeo_link",
         "label": "t:settings_schema.social-media.settings.social_vimeo_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_vimeo_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_whatsapp_link",
+        "label": "t:settings_schema.social-media.settings.social_whatsapp_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_whatsapp_link.info"
       }
     ]
   },

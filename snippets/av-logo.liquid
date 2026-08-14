@@ -1,0 +1,27 @@
+{% comment %}
+  Renders the Alquimia Vita logo lockup (icon + wordmark) shipped with the
+  theme. Used only as long as Theme settings > Logo has no image uploaded.
+  As soon as a merchant uploads one there, Dawn's native `settings.logo`
+  takes over automatically wherever this snippet would have rendered.
+
+  Usage:
+  {% render 'av-logo' %}
+{% endcomment %}
+<span class="av-logo">
+  <img
+    src="{{ 'logo-icon.svg' | asset_url }}"
+    alt=""
+    class="av-logo__icon"
+    width="32"
+    height="32"
+    loading="eager"
+  >
+  <img
+    src="{{ 'logo-wordmark.svg' | asset_url }}"
+    alt="{{ shop.name }}"
+    class="av-logo__wordmark"
+    width="120"
+    height="48"
+    loading="eager"
+  >
+</span>

@@ -47,6 +47,13 @@
         },
         "body_scale": {
           "label": "Escala"
+        },
+        "header__3": {
+          "content": "Acento"
+        },
+        "type_accent_font": {
+          "label": "Fuente",
+          "info": "Se usa en eyebrows, badges y textos pequeños"
         }
       }
     },
@@ -88,6 +95,10 @@
         "social_vimeo_link": {
           "label": "Vimeo",
           "info": "https://vimeo.com/shopify"
+        },
+        "social_whatsapp_link": {
+          "label": "WhatsApp",
+          "info": "https://wa.me/5491100000000"
         },
         "header": {
           "content": "Cuentas de redes sociales"

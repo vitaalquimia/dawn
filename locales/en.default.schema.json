@@ -204,6 +204,13 @@
         },
         "body_scale": {
           "label": "Scale"
+        },
+        "header__3": {
+          "content": "Accent"
+        },
+        "type_accent_font": {
+          "label": "Font",
+          "info": "Used for eyebrows, badges and small labels"
         }
       }
     },
@@ -292,6 +299,10 @@
         "social_vimeo_link": {
           "label": "Vimeo",
           "info": "https://vimeo.com/shopify"
+        },
+        "social_whatsapp_link": {
+          "label": "WhatsApp",
+          "info": "https://wa.me/5491100000000"
         }
       }
     },
